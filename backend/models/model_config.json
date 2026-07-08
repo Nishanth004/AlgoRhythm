@@ -1,0 +1,55 @@
+{
+  "models": [
+    {
+      "id": "dutch_folk",
+      "name": "Dutch Folk Songs (LSTM)",
+      "type": "lstm",
+      "path": "models/dutch_folk.pth",
+      "mapping": "mapping.json",
+      "description": "Original Dutch folk song generator using LSTM",
+      "genres": ["folk", "traditional"],
+      "trained_on": "Dutch Folk Songs Dataset",
+      "status": "active"
+    },
+    {
+      "id": "music_transformer_chopin",
+      "name": "Chopin Style (Transformer)",
+      "type": "transformer",
+      "path": "models/chopintransformerv5.pt",
+      "description": "Classical piano in style of Chopin",
+      "genres": ["classical", "piano", "romantic"],
+      "trained_on": "Chopin MIDI Dataset",
+      "status": "active"
+    },
+    {
+      "id": "music_transformer_vgm",
+      "name": "Video Game Music (Transformer)",
+      "type": "transformer",
+      "path": "models/vgmtransformerv4.pt",
+      "description": "Video game style music generation",
+      "genres": ["game", "electronic", "chiptune"],
+      "trained_on": "Video Game Music Dataset",
+      "status": "active"
+    },
+    {
+      "id": "music_transformer_generic_v4",
+      "name": "Generic Music v4 (Transformer)",
+      "type": "transformer",
+      "path": "models/model4v2.pt",
+      "description": "General purpose music generation - version 4",
+      "genres": ["general", "multi-genre"],
+      "trained_on": "Generic MIDI Dataset",
+      "status": "active"
+    },
+    {
+      "id": "music_transformer_generic_v6",
+      "name": "Generic Music v6 (Transformer)",
+      "type": "transformer",
+      "path": "models/model6v2.pt",
+      "description": "General purpose music generation - version 6",
+      "genres": ["general", "multi-genre"],
+      "trained_on": "Generic MIDI Dataset",
+      "status": "active"
+    }
+  ]
+}

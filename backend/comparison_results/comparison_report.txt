@@ -1,0 +1,170 @@
+================================================================================
+OBJECTIVE COMPARISON REPORT: Base Model vs RL Model
+================================================================================
+
+Generated: 2025-12-05 15:34:05
+
+================================================================================
+RL MODEL TRAINING INFORMATION
+================================================================================
+Total User Feedback: 13
+Positive Feedback (4-5 stars): 9
+Negative Feedback (1-2 stars): 3
+Average Rating: 3.54
+
+================================================================================
+STATISTICAL SUMMARY
+================================================================================
+
+Metric                    Base Avg        RL Avg          Difference     
+--------------------------------------------------------------------------------
+total_notes               52.40           59.60           +7.20 (+13.7%)
+avg_pitch                 62.92           67.53           +4.61 (+7.3%)
+pitch_range               18.80           18.80           +0.00 (+0.0%)
+avg_velocity              95.90           95.95           +0.04 (+0.0%)
+pitch_diversity           0.21            0.18            -0.03 (-13.0%)
+avg_interval              2.39            2.25            -0.13 (-5.6%)
+
+================================================================================
+DETAILED TEST RESULTS
+================================================================================
+
+--------------------------------------------------------------------------------
+Test 1: a cheerful morning with birds singing
+Expected Mood: happy
+--------------------------------------------------------------------------------
+
+Mood Analysis:
+  Base Model - Valence: 0.636, Arousal: 0.495
+  RL Model   - Valence: 0.636, Arousal: 0.495
+
+Musical Characteristics:
+  Metric                    Base         RL           Diff
+  ------------------------------------------------------------
+  total_notes               27.00        76.00        +49.00
+  avg_pitch                 62.30        70.92        +8.62
+  pitch_std                 2.72         4.96         +2.24
+  pitch_range               12.00        24.00        +12.00
+  avg_velocity              96.00        96.00        +0.00
+  velocity_std              0.00         0.00         +0.00
+  avg_interval              2.92         2.55         -0.38
+  interval_std              2.02         3.16         +1.14
+  unique_pitches            6.00         13.00        +7.00
+  pitch_diversity           0.22         0.17         -0.05
+
+--------------------------------------------------------------------------------
+Test 2: a melancholic rainy evening
+Expected Mood: sad
+--------------------------------------------------------------------------------
+
+Mood Analysis:
+  Base Model - Valence: 0.462, Arousal: 0.409
+  RL Model   - Valence: 0.462, Arousal: 0.409
+
+Musical Characteristics:
+  Metric                    Base         RL           Diff
+  ------------------------------------------------------------
+  total_notes               87.00        75.00        -12.00
+  avg_pitch                 56.39        69.39        +13.00
+  pitch_std                 5.11         5.85         +0.74
+  pitch_range               24.00        24.00        +0.00
+  avg_velocity              96.00        96.00        +0.00
+  velocity_std              0.00         0.00         +0.00
+  avg_interval              2.48         2.07         -0.41
+  interval_std              2.62         1.70         -0.91
+  unique_pitches            12.00        14.00        +2.00
+  pitch_diversity           0.14         0.19         +0.05
+
+--------------------------------------------------------------------------------
+Test 3: an energetic dance celebration
+Expected Mood: energetic
+--------------------------------------------------------------------------------
+
+Mood Analysis:
+  Base Model - Valence: 0.610, Arousal: 0.481
+  RL Model   - Valence: 0.610, Arousal: 0.481
+
+Musical Characteristics:
+  Metric                    Base         RL           Diff
+  ------------------------------------------------------------
+  total_notes               56.00        43.00        -13.00
+  avg_pitch                 67.61        73.56        +5.95
+  pitch_std                 6.21         2.76         -3.45
+  pitch_range               22.00        10.00        -12.00
+  avg_velocity              96.00        96.00        +0.00
+  velocity_std              0.00         0.00         +0.00
+  avg_interval              2.60         1.76         -0.84
+  interval_std              3.00         1.48         -1.52
+  unique_pitches            13.00        7.00         -6.00
+  pitch_diversity           0.23         0.16         -0.07
+
+--------------------------------------------------------------------------------
+Test 4: peaceful meditation by the ocean
+Expected Mood: calm
+--------------------------------------------------------------------------------
+
+Mood Analysis:
+  Base Model - Valence: 0.623, Arousal: 0.487
+  RL Model   - Valence: 0.623, Arousal: 0.487
+
+Musical Characteristics:
+  Metric                    Base         RL           Diff
+  ------------------------------------------------------------
+  total_notes               67.00        60.00        -7.00
+  avg_pitch                 64.96        58.82        -6.14
+  pitch_std                 4.44         4.03         -0.41
+  pitch_range               24.00        19.00        -5.00
+  avg_velocity              96.00        96.00        +0.00
+  velocity_std              0.00         0.00         +0.00
+  avg_interval              2.14         2.25         +0.12
+  interval_std              2.42         2.40         -0.01
+  unique_pitches            12.00        10.00        -2.00
+  pitch_diversity           0.18         0.17         -0.01
+
+--------------------------------------------------------------------------------
+Test 5: dramatic storm approaching
+Expected Mood: dramatic
+--------------------------------------------------------------------------------
+
+Mood Analysis:
+  Base Model - Valence: 0.500, Arousal: 0.250
+  RL Model   - Valence: 0.500, Arousal: 0.250
+
+Musical Characteristics:
+  Metric                    Base         RL           Diff
+  ------------------------------------------------------------
+  total_notes               25.00        44.00        +19.00
+  avg_pitch                 63.36        64.95        +1.59
+  pitch_std                 3.08         3.87         +0.78
+  pitch_range               12.00        17.00        +5.00
+  avg_velocity              95.52        95.73        +0.21
+  velocity_std              2.35         1.79         -0.56
+  avg_interval              1.79         2.63         +0.84
+  interval_std              1.47         2.60         +1.13
+  unique_pitches            7.00         10.00        +3.00
+  pitch_diversity           0.28         0.23         -0.05
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+1. Pitch Characteristics:
+   - Average pitch difference: +4.61 MIDI notes
+   - RL model higher than base model
+
+2. Musical Diversity:
+   - Pitch diversity difference: -0.027
+   - RL model is less diverse
+
+3. Dynamics:
+   - Average velocity difference: +0.04
+   - RL model is louder on average
+
+================================================================================
+CONCLUSION
+================================================================================
+
+The RL model, trained on 13 user ratings (avg: 3.54/5.0), shows measurable differences from the base model.
+
+These differences indicate that the RL model has adapted to user preferences
+reflected in the training feedback, resulting in distinct musical characteristics.
