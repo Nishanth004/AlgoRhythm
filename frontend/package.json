@@ -1,0 +1,24 @@
+{
+  "name": "algorhythm-frontend",
+  "version": "2.0.0",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "ethers": "^6.13.1",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-tsparticles": "^2.9.3",
+    "tone": "^14.8.49",
+    "@tonejs/midi": "^2.0.27",
+    "tsparticles": "^2.11.1",
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0",
+    "wavesurfer.js": "^7.8.0",
+    "react-markdown": "^9.0.1"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  }
+}

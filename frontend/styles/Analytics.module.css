@@ -1,0 +1,239 @@
+/* frontend/styles/Analytics.module.css */
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+  color: #e8e8e8;
+  padding: 40px 20px;
+  overflow-x: hidden;
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 50%, #f67280 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(255, 107, 157, 0.5), 
+               0 0 40px rgba(255, 107, 157, 0.3);
+  filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.6));
+}
+
+.backLink {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #c06c84, #ff6b9d);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.backLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 107, 157, 0.4);
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.statCard {
+  background: rgba(30, 30, 46, 0.8);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 107, 157, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+  border-color: rgba(255, 107, 157, 0.5);
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6b9d;
+  margin-bottom: 10px;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.historySection {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(30, 30, 46, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 107, 157, 0.2);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+.historySection h2 {
+  color: #ff6b9d;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.historyGrid {
+  display: grid;
+  gap: 20px;
+}
+
+.historyCard {
+  background: rgba(20, 20, 36, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 107, 157, 0.15);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.historyCard:hover {
+  border-color: rgba(255, 107, 157, 0.4);
+  transform: translateX(5px);
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.seedHash {
+  font-family: monospace;
+  color: #c06c84;
+  font-size: 14px;
+  background: rgba(192, 108, 132, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.timestamp {
+  color: #999;
+  font-size: 13px;
+}
+
+.prompt {
+  color: #e8e8e8;
+  font-size: 15px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.detailLabel {
+  color: #ff6b9d;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.detailValue {
+  color: #e8e8e8;
+  font-size: 14px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 16px;
+}
+
+.ratingCount {
+  color: #999;
+  font-size: 13px;
+}
+
+.ipfsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  background: rgba(255, 107, 157, 0.2);
+  color: #ff6b9d;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid rgba(255, 107, 157, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.ipfsLink:hover {
+  background: rgba(255, 107, 157, 0.3);
+  transform: translateY(-2px);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.emptyState p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}

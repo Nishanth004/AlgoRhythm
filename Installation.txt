@@ -1,0 +1,110 @@
+## AlgoRhythm - Installation Guide
+
+### Backend Setup
+
+1. Navigate to backend directory:
+   cd backend
+
+2. Create and activate virtual environment (recommended):
+   python -m venv .venv
+   
+   # On Linux/macOS:
+   source .venv/bin/activate
+   
+   # On Windows:
+   .venv\Scripts\activate
+
+3. Install Python dependencies:
+   pip install -r requirements.txt
+
+4. Set environment variables:
+   
+   # On Linux/macOS:
+   export PINATA_API_KEY=cd965f8b03989d7822ae
+   export PINATA_SECRET_API_KEY=3a577a9729967c140cb0c79f8c7ad9541e4e699ce6253c1d96b4ded0a1fdce7b
+   export GROQ_API_KEY=your_groq_api_key_here
+   
+   # On Windows:
+   set PINATA_API_KEY=cd965f8b03989d7822ae
+   set PINATA_SECRET_API_KEY=3a577a9729967c140cb0c79f8c7ad9541e4e699ce6253c1d96b4ded0a1fdce7b
+   set GROQ_API_KEY=your_groq_api_key_here
+
+5. Create models directory and move model file:
+   mkdir models
+   move model.pth models/dutch_folk.pth     (Windows)
+   mv model.pth models/dutch_folk.pth       (Linux/macOS)
+
+6. Verify required files exist:
+   - mapping.json (in backend root)
+   - models/dutch_folk.pth
+   - models/model_config.json (will be created automatically)
+   - dataset/ folder (if retraining)
+   - dutch_folk_songs/ folder (if retraining)
+
+7. Start the backend server:
+   python server.py
+   
+   Server will run on: http://localhost:5000
+
+### Frontend Setup
+
+1. Navigate to frontend directory:
+   cd frontend
+
+2. Install Node.js dependencies:
+   npm install
+
+3. Create .env.local file in frontend directory with:
+   NEXT_PUBLIC_CONTRACT_ADDRESS=0xfe8FC79fc11e9A5D61d07B80f3613e4dEb264510
+
+4. Start development server:
+   npm run dev
+   
+   Frontend will run on: http://localhost:3000
+
+### Get Groq API Key (for AI Chatbot)
+
+1. Visit: https://console.groq.com
+2. Sign up for free account
+3. Navigate to API Keys section
+4. Create new API key
+5. Copy and set as GROQ_API_KEY environment variable
+
+### Optional: Additional Models
+
+The system currently supports Dutch Folk model by default.
+
+To add more models:
+1. Download model weights from repositories
+2. Place in backend/models/ directory
+3. Update models/model_config.json
+
+Example models:
+- Chopin Transformer: https://github.com/spectraldoy/music-transformer/raw/main/models/chopintransformerv5.pt
+- VGM Transformer: https://github.com/spectraldoy/music-transformer/raw/main/models/vgmtransformerv4.pt
+
+Note: Additional models require implementation in Generator.py
+
+### Smart Contract Deployment (Optional for NFT Minting)
+
+1. Open Remix IDE: https://remix.ethereum.org
+2. Create AlgoRhythmSeedNFT.sol contract file
+3. Connect MetaMask to Polygon Amoy testnet
+4. Deploy contract
+5. Copy contract address to frontend .env.local
+
+### Features Included
+
+1. Waveform Visualization - Real-time audio waveform display during playback
+2. Multiple Model Support - Architecture for switching between different music models
+3. AI Chatbot - Interactive assistant with voice support (requires Groq API key)
+4. IPFS Gateway Viewer - View and manage IPFS CIDs with metadata preview
+5. Seed History & Analytics - Track all generations with detailed statistics
+6. Story-to-Suite Mode - Generate multi-scene narrative music compositions
+7. Explainability Dashboard - Understand mood-to-music mappings and analysis
+
+### Database Files (Auto-generated)
+
+The following SQLite databases are created automatically on first run:
+- feedback.db - User ratings and feedback
+- analytics.db - Seed history and usage statistics
