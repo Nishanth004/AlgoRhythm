@@ -1,0 +1,15 @@
+flask
+flask-cors
+torch
+music21
+numpy
+Pillow
+requests
+groq
+scipy
+librosa
+pydub
+mido
+vaderSentiment
+matplotlib
+seaborn
